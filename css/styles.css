@@ -150,4 +150,11 @@ margin-bottom: 40px;
 
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width:100%;
+    padding: 15px;
+}
 
