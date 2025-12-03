@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel & Sienna</title>
+    <title>RSVP</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive-nav.css">
     <script src="js/responsive-nav.js"></script>
@@ -27,51 +27,58 @@
     <script>
     var nav = responsiveNav(".nav-collapse");
     </script>
-
-<div class="container">
-        <form id="contact-form">
-        <h1>RSVP</h1>
-
-
-        <label for="name">First Name:</label>
-        <input type="text" id="name" name="first name" required />
-
-
-        <label for="name">Last Name:</label>
-        <input type="text" id="name" name="last name" required />
-        </fieldset>
-        
-        <button type="submit">submit</button>
-        <p id="form-message"></p>
-        </form>
+    <div class="header-box">
+    <h1> RSVP</h1>
     </div>
 
-
-    <script>
-        const form = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwMvvJI9BtjoxgJM95azHFZ8AN2YoL3-OFK6zM650O4B6zdKdru7cad0DKjfG6KPGFZ9w/exec';
-
-
-        form.addEventListener('submit', e => {
-        e.preventDefault();
-        formMessage.textContent = 'Sending...';
-
-
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-            formMessage.textContent = 'Message sent successfully!';
-            form.reset();
-            setTimeout(() => { formMessage.textContent = ''; }, 5000);
-            })
-            .catch(error => {
-            formMessage.textContent = 'Oops! Something went wrong.';
-            console.error('Error!', error.message);
-            });
-        });
-    </script>
-
+    <div class="formcontainer">
+        <form id="contact-form">
+            <h3>We can't wait to see you!</h3>
     
+            <label for="name"><p>First and Last Name:</p></label>
+            <input type="text" id="name" name="name" required />
+        
+            <label for="email"><p>Email:</p></label>
+            <input type="email" id="email" name="email" required />
+        
+            <label for="message"><p>Message:</p></label>
+            <textarea id="message" name="message" rows="2" required></textarea>
 
+            
+        
+            <button type="submit">Submit</button>
+            <p id="form-status"></p>
+        </form>
+    </div>
+        <script>
+            const form = document.getElementById("contact-form");
+            const status = document.getElementById("form-status");
+        
+            form.addEventListener("submit", (e) => {
+            e.preventDefault();
+        
+            status.innerText = "Sending your message...";
+        
+            const data = new FormData(form);
+            
+            // Your Google Script URL
+            const action = "https://script.google.com/macros/s/AKfycbyGxTD2EO871XCIgArtXeASKXS0QSQ4-2VBB0U53rG3KyP_FFQeCmF-h-YVjOrJM-Ehtg/exec";
+        
+            fetch(action, {
+                method: "POST",
+                body: data,
+                mode: "no-cors", 
+            })
+                .then(() => {
+                
+                status.innerText = "Message sent successfully!";
+                form.reset();
+                })
+                .catch((error) => {
+                status.innerText = "Oops! There was a problem.";
+                console.error("Error:", error);
+                });
+            });
+        </script>
 </body>
 </html>

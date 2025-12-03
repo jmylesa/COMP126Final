@@ -20,6 +20,7 @@ header { /*container for navbar*/
     color: #EDAFB8;
     font-size: 4rem;
     font-style: italic;
+    font-family: "Oooh Baby", cursive;
 }
 .and {
     color: #F7E1D7;
@@ -31,6 +32,7 @@ header { /*container for navbar*/
     font-size: 4rem;
     font-style: italic;
     margin-bottom: .5rem;
+    font-family: "Oooh Baby", cursive;
 }
 h1, h2, h3, h4, p {
     font-family: "Spectral", serif;
@@ -90,13 +92,13 @@ button:hover, button:focus {
 .map-pic{ 
     max-width: 90%;
     border-radius: 10%;
- }
+}
 
- .venue-travel{
+.venue-travel{
     margin-bottom: 30px;
- }
+}
 
- .venue-pic{
+.venue-pic{
     max-width: 90%;
     border-radius: 10%;}
 
@@ -105,18 +107,31 @@ color:#F7E1D7;
 margin-bottom: 40px;
 }
 
- .travel-header-box { 
+.travel-header-box { 
     margin-bottom: 50px;
     border-bottom: solid #F7E1D7;
     
- }
+}
 
- .accom-text { 
+.accom-text { 
     margin-bottom: 75px;
- }
+}
+
+.header-box { 
+    margin-bottom: 50px;
+    border-bottom: solid #F7E1D7;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.header-box h1{ 
+    text-align: center;
+    padding-top: 15px;
+}
 
 
- @media screen and (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
     .big-travel-container{
         width: 100%;
         display: grid;
@@ -158,10 +173,31 @@ margin-bottom: 40px;
 form{
     display: flex;
     flex-direction: column;
-    width: auto;
+    justify-content: center;
+    width: 50%;
     max-width:100%;
-    padding: 15px;
+    padding: 15px;  
+}
 
+.formcontainer{
+    display: flex;
+    justify-content: center;
+}
+
+form h3{
+    color: #B0C4B1;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Oooh Baby", cursive;
+}
+form p{
+    color: #B0C4B1;
+    font-weight: bold;
+}
+
+script{
+    color: aqua;
+}
 .date {
     font-size: 2rem;
     color: #F7E1D7;
@@ -233,5 +269,4 @@ form{
     .dancing{
         grid-column: 2/3;
     }
-}
 }
