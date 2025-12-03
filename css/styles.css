@@ -16,15 +16,20 @@ header { /*container for navbar*/
     margin-bottom: -3rem;
     text-align: center;
 }
-#name1 {
+.name1 {
     color: #EDAFB8;
+    font-size: 4rem;
+    font-style: italic;
 }
-#and {
-    color: #4a5759;
-    font-size: 3rem;
+.and {
+    color: #F7E1D7;
+    font-size: 2rem;
+
 }
-#name2 {
+.name2 {
     color: #B0C4B1;
+    font-size: 4rem;
+    font-style: italic;
     margin-bottom: .5rem;
 }
 h1, h2, h3, h4, p {
@@ -156,5 +161,77 @@ form{
     width: auto;
     max-width:100%;
     padding: 15px;
+
+.date {
+    font-size: 2rem;
+    color: #F7E1D7;
 }
 
+.name-box{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.banner {
+    width: 100%;
+    border-radius: 10%;
+    padding-bottom: 30px;
+    
+}
+
+.story-box{ 
+    display: grid;
+    justify-items: center;
+    padding-bottom: 30px;
+
+}
+
+.story-text1{ 
+    color: #F7E1D7;
+    padding-bottom: 30px;
+    line-height: 2;
+}
+
+.story-text2{ 
+    color: #F7E1D7;
+    padding-bottom: 30px;
+    line-height: 2;
+    max-width: 100%
+}
+
+.dancing{
+    max-width: 75%;
+    border-radius: 10%;
+}
+
+.schedule-pic{ 
+    max-width: 100%
+}
+
+.a-box {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .story-box{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .our-story { 
+        grid-column: 1/2;
+        padding-bottom: 30px;
+        
+    }
+
+    .story-text1{
+        grid-column : 1/2;
+        max-width: 75%;
+    }
+
+    .dancing{
+        grid-column: 2/3;
+    }
+}
+}
