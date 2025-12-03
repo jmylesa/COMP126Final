@@ -4,7 +4,7 @@ body {
     margin: 0;
 }
 header { /*container for navbar*/
-    background: #4A5759;
+    background: #576465;
     padding: 2rem;
     border-radius: 5px;
     margin: 0 .5rem;
@@ -58,7 +58,7 @@ h4 {
     font-size: 1.25rem;
 }
 a {
-    color: #B0C4B1;
+    color: #ffffff;
     text-decoration: underline dotted;
     transition: .5s;
 }
@@ -80,7 +80,7 @@ button:hover, button:focus {
     background: #F7E1D7;
 }
 .container { /*primary content container*/
-    background: #4A5759;
+    background: #;
     box-shadow: #4a5759 0 0 3px;
     padding: 1rem;
     text-align: center;
@@ -100,7 +100,8 @@ button:hover, button:focus {
 
 .venue-pic{
     max-width: 90%;
-    border-radius: 10%;}
+    border-radius: 10%;
+}
 
 .travel-text { 
 color:#F7E1D7;
