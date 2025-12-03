@@ -4,6 +4,7 @@ body {
     margin: 0;
 }
 header { /*container for navbar*/
+    font-family: "Oooh Baby", cursive;
     background: #576465;
     padding: 2rem;
     border-radius: 5px;
@@ -16,6 +17,16 @@ header { /*container for navbar*/
     margin-bottom: -3rem;
     text-align: center;
 }
+header li a.active{
+    color: #EDAFB8;
+    text-decoration: none;
+}
+header li a:hover:not(.active){
+    color: #EDAFB8;
+    text-decoration: underline;
+    border-radius: 10px;
+}
+
 .name1 {
     color: #EDAFB8;
     font-size: 4rem;
@@ -80,13 +91,22 @@ button:hover, button:focus {
     background: #F7E1D7;
 }
 .container { /*primary content container*/
-    background: #;
+    background: #4a5759;
     box-shadow: #4a5759 0 0 3px;
     padding: 1rem;
     text-align: center;
 }
+
 .container > p {
     color: #F7E1D7;
+}
+
+.box{
+    border-top: solid 3px;
+    border-color: #576465;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding-top: 1rem;
 }
 
 .map-pic{ 
