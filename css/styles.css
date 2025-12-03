@@ -276,3 +276,39 @@ script{
         grid-column: 2/3;
     }
 }
+
+.wedding-party{
+    padding: 40px 60px;
+    max-width: 950px;
+    margin: 0 auto 80px;
+}
+
+
+.party-members{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 50px;
+}
+
+.party-members img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 120px;
+}
+
+.description h2{
+    font-size: 22px;
+    margin: 0;
+    font-weight: 600;
+    color: #B0C4B1;
+}
+
+.description p{
+    margin-top: 6px;
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 600px;
+    color: #F7E1D7;
+}
