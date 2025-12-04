@@ -298,28 +298,29 @@ script{
 }
 
 .wedding-party{
-    padding: 40px 60px;
-    max-width: 950px;
-    margin: 0 auto 80px;
+    padding: 20px 20px 40px;
+    margin: 0 auto 60px;
 }
 
 
 .party-members{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 35px;
-    margin-bottom: 50px;
+    gap: 16px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .party-members img{
-    width: 270px;
-    height: 200px;
+    width: 220px;
+    height: 180px;
     object-fit: cover;
     border-radius: 120px;
 }
 
 .description h2{
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
     font-weight: 600;
     color: #B0C4B1;
@@ -327,26 +328,73 @@ script{
 
 .description p{
     margin-top: 6px;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.5;
-    max-width: 600px;
+    max-width: 90%;
+    margin-inline: auto;
     color: #F7E1D7;
 }
 
 .contact-info{
-    max-width: 700px;
-    margin: 40px auto 80px;
+    max-width: 90%;
+    margin: 20px auto 60px;
     text-align: center;
 }
 
 .contact-info h2{
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .contact-info p{
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.5;
     color: #F7E1D7;
+}
+
+@media screen and (min-width: 768px) {
+    .wedding-party{
+        padding: 40px 60px;
+        max-width: 950px;
+        margin: 0 auto 80px;
+    }
+
+    .party-members{
+        flex-direction: row;
+        align-items: center;
+        gap: 35px;
+        margin-bottom: 50px;
+        text-align: left;
+    }
+
+    .party-members img{
+        width: 270px;
+        height: 200px;
+        border-radius: 120px;
+    }
+
+    .description h2{
+        font-size: 22px;
+    }
+
+    .description p{
+        font-size: 22px;
+        max-width: 600px;
+        margin-inline: 0;
+    }
+
+    .contact-info{
+        max-width: 700px;
+        margin: 40px auto 80px;
+    }
+
+    .contact-info h2{
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p{
+        font-size: 22px;
+    }
 }
