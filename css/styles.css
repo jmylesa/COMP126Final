@@ -332,3 +332,21 @@ script{
     max-width: 600px;
     color: #F7E1D7;
 }
+
+.contact-info{
+    max-width: 700px;
+    margin: 40px auto 80px;
+    text-align: center;
+}
+
+.contact-info h2{
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-info p{
+    font-size: 22px;
+    line-height: 1.5;
+    color: #F7E1D7;
+}
